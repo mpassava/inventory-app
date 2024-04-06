@@ -17,6 +17,12 @@ app.get("/", (req, res) => {
   res.send("App is working");
 });
 
+app.get("/query", (req, res) => {
+  if (!req.body.query) res.status(400).send('Query missing or invalid');
+  const { query } = req.body.query;
+  
+})
+
 app.listen(port, (err) => {
   if (err) {
     console.error("error starting server: ", err.message);

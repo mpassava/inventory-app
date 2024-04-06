@@ -1,4 +1,4 @@
-export default function renderItems() {
+export default function Item(item) {
   const item = `
   <tr>
     <td class="border px-4 py-2"></td>
