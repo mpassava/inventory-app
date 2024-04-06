@@ -12,25 +12,22 @@
         <a href="#" class="text-white text-lg font-semibold">Inventory Management</a>
       </div>
     </nav>
-    <div class="container mx-auto mt-8 w-9/10">
-      <div class="bg-white shadow-md rounded-md p-6">
+    <div class="flex mx-auto mt-8 w-screen">
+      <div class="bg-white w-11/12 shadow-md rounded-md p-6 mx-auto">
         <h2 class="text-xl font-semibold mb-4">Item List</h2>
         <div class="overflow-x-auto">
-          <table class="table-auto w-full">
-            <thead>
-              <tr class="bg-gray-200">
-                <th class="px-3 py-2">ID</th>
-                <th class="px-3 py-2">Product Name</th>
-                <th class="px-3 py-2">Description</th>
-                <th class="px-3 py-2">Purchase Price</th>
-                <th class="px-3 py-2">Sales Price</th>
-                <th class="px-3 py-2">Margin</th>
-                <th class="px-3 py-2">Location</th>
-                <th class="px-3 py-2">Actions</th>
-              </tr>
-            </thead>
-            <tbody></tbody>
-          </table>
+          <ul class="flex flex-col">
+            <li class="flex bg-gray-200">
+              <div class="px-3 py-2 w-1/8">ID</div>
+              <div class="px-3 py-2 w-1/8">Product Name</div>
+              <div class="px-3 py-2 w-1/8">Description</div>
+              <div class="px-3 py-2 w-1/8">Purchase Price</div>
+              <div class="px-3 py-2 w-1/8">Sales Price</div>
+              <div class="px-3 py-2 w-1/8">Margin</div>
+              <div class="px-3 py-2 w-1/8">Location</div>
+              <div class="flex-1 px-3 py-2 text-right">Actions</div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
