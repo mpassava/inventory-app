@@ -1,5 +1,5 @@
 export default function Item(item) {
-  const item = `
+  const row = `
   <tr>
     <td class="border px-4 py-2"></td>
     <td class="border px-4 py-2"></td>

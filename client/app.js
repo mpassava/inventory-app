@@ -1,12 +1,12 @@
-import createItemList from "./components/itemList.js";
+import createItemList from "./components/Item.js";
 
-class APP {
-  constructor() {
-    createItemList();
-  }
+// class APP {
+//   constructor() {
+//     createItemList();
+//   }
 
-}
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
-  new APP();
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   new APP();
+// });
