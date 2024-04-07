@@ -1,12 +1,13 @@
-import createItemList from "./components/Item.js";
+import getItems from "./utils/getItems.js";
+import Item from "./components/Item.js";
 
-// class APP {
-//   constructor() {
-//     createItemList();
-//   }
+const itemTable = document.getElementById('table')
 
-// }
+let products = [];
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   new APP();
-// });
+document.addEventListener("DOMContentLoaded", async () => {
+  const result = await getItems('all', 'Products');
+  const data = result.json();
+  console.log(data)
+  products = data;
+});

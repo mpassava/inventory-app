@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .tcell {
+    @apply px-3 py-2 min-w-fit;
+  }
+}

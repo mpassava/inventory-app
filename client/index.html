@@ -9,25 +9,25 @@
   <body class="bg-gray-100 font-sans leading-normal tracking-normal w-max">
     <nav class="bg-gray-800 p-4">
       <div class="container mx-auto flex justify-between items-center">
-        <a href="#" class="text-white text-lg font-semibold">Inventory Management</a>
+        <a href="#" class="text-white text-lg font-semibold">
+          Inventory Management
+        </a>
       </div>
     </nav>
     <div class="flex mx-auto mt-8 w-screen">
-      <div class="bg-white w-11/12 shadow-md rounded-md p-6 mx-auto">
+      <div class="bg-white w-full shadow-md rounded-md p-6 mx-4">
         <h2 class="text-xl font-semibold mb-4">Item List</h2>
-        <div class="overflow-x-auto">
-          <ul class="flex flex-col">
-            <li class="flex bg-gray-200">
-              <div class="px-3 py-2 w-1/8">ID</div>
-              <div class="px-3 py-2 w-1/8">Product Name</div>
-              <div class="px-3 py-2 w-1/8">Description</div>
-              <div class="px-3 py-2 w-1/8">Purchase Price</div>
-              <div class="px-3 py-2 w-1/8">Sales Price</div>
-              <div class="px-3 py-2 w-1/8">Margin</div>
-              <div class="px-3 py-2 w-1/8">Location</div>
-              <div class="flex-1 px-3 py-2 text-right">Actions</div>
-            </li>
-          </ul>
+        <div id="table" class="overflow-x-auto flex flex-col">
+          <div id="thead" class="flex bg-gray-200 divide-x divide-gray-400">
+            <strong class="tcell">ID</strong>
+            <strong class="tcell">Product Name</strong>
+            <strong class="tcell">Description</strong>
+            <strong class="tcell">Purchase Price</strong>
+            <strong class="tcell">Sales Price</strong>
+            <strong class="tcell">Margin</strong>
+            <strong class="tcell">Location</strong>
+            <strong class="tcell flex-1 text-right">Actions</strong>
+          </div>
         </div>
       </div>
     </div>

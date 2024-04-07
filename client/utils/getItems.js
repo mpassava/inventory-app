@@ -1,9 +1,9 @@
 export default async function getItems(query, list) {
   const url = 'http://localhost/3030/query';
-  list = list.tolowercase();
+  list = list.toLowerCase();
   list = `${list[0].toUpperCase()}+${list.substring(1)}`
 
-  if (query.tolowercase() === "all") {
+  if (query.toLowerCase() === "all") {
     query = `SELECT * FROM ${list};`;
   }
 

@@ -18,7 +18,10 @@ app.get("/", (req, res) => {
 });
 
 app.get("/query", (req, res) => {
-  if (!req.body.query) res.status(400).send("Query missing or invalid");
+  if (!req.body.query) {
+    res.status(400).send("Query missing or invalid");
+    return;
+  }
   const { query } = req.body;
   db.all(query, (err, rows) => {
     if (err) {
