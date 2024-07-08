@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const port = 3030;
-const sqlite3 = require("sqlite3");
-const DB = require("./db.js");
+const DBManager = require("./db.js");
+const DB = DBManager.getInstance();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  console.log(res);
+app.get("/", (_, res) => {
+  DB.connect();
   res.send("App is working");
 });
 
