@@ -1,4 +1,4 @@
-import getItems from "./utils/getItems.js";
+import getProducts from "./utils/getProducts.js";
 import TableRow from "./components/TableRow.js";
 
 
@@ -15,10 +15,7 @@ const renderItems = arr => {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  // const result = await getItems('all', 'Products');
-  // const data = result.json();
-  const response = await fetch('../server/lib/sampleData.json');
-  const data = await response.json();
+  const data = await getProducts();
   console.log(data)
   products = data;
   renderItems(products)

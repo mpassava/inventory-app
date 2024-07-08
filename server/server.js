@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
 const port = 3030;
-const DBManager = require("./db.js");
-const DB = DBManager.getInstance();
+const cors = require('cors')
 
 const products = require("./routes/products.js");
 
-app.use('/products', products);
 app.use(express.json());
+app.use(cors());
+app.use('/products', products);
 
 app.get("/", (_, res) => {
   res.send("App is working");
