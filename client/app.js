@@ -8,8 +8,8 @@ let products = [];
 let productElements = [];
 
 const renderItems = arr => {
-  arr.forEach(item => {
-    const tableRow = TableRow(item);
+  arr.forEach((item, i) => {
+    const tableRow = TableRow(item, i);
     itemTable.innerHTML += tableRow;
   });
 }
