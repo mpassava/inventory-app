@@ -4,10 +4,12 @@ const port = 3030;
 const DBManager = require("./db.js");
 const DB = DBManager.getInstance();
 
+const products = require("./routes/products.js");
+
+app.use('/products', products);
 app.use(express.json());
 
 app.get("/", (_, res) => {
-  DB.connect();
   res.send("App is working");
 });
 

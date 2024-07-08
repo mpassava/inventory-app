@@ -5,14 +5,7 @@ class DB {
     this.db = null;
 
     process.on("SIGINT", () => {
-      this.close((err) => {
-        if (err) {
-          console.error(err.message, "error closing database");
-          return;
-        }
-        console.log("database connection closed");
-        process.exit(0);
-      });
+      this.close(() => process.exit(0));
     });
   }
 
@@ -32,15 +25,23 @@ class DB {
   }
 
   close(callback) {
-    if (this.db) this.db.close(callback);
+    if (this.db)
+      this.db.close((err) => {
+        if (err) {
+          console.error(err.message, "error closing database");
+          return;
+        }
+        console.log("database connection closed");
+        if (callback) callback();
+      });
   }
 
   run(query, params, callback) {
     this.db.run(query, params, callback);
   }
 
-  all(query, params, callback) {
-    this.db.all(query, params, callback)
+  all(query, params = {}, callback) {
+    this.db.all(query, params, callback);
   }
 }
 
@@ -52,5 +53,5 @@ module.exports = {
       instance = new DB();
     }
     return instance;
-  }
+  },
 };
