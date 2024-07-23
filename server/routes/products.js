@@ -14,8 +14,6 @@ router.get("/", (_, res) => {
     }
     res.status(200).json(rows);
   });
-
-  DB.close();
 });
 
 router.get('/headers', (_, res) => {
